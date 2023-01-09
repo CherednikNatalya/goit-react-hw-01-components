@@ -1,11 +1,12 @@
 import {App} from '../App'
+import PropTypes from 'prop-types';
 
-export default function Profile ({username, usertag, location, avatar, stats}) {
+export const Profile = ({username, usertag, location, avatar, stats})=> {
   return (
     <div class="profile">
   <div class="description">
     <img
-      src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png"
+      src={avatar}
       alt="User avatar"
       class="avatar"
     />
@@ -32,3 +33,13 @@ export default function Profile ({username, usertag, location, avatar, stats}) {
 
   )
 }
+
+
+Profile.propTypes ={
+  username: PropTypes.string,
+  usertag: PropTypes.string,
+  location: PropTypes.string,
+  avatar: PropTypes.string,
+  stats: PropTypes.arrayOf(PropTypes.string),
+}
+
