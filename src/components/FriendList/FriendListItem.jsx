@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
+// import { GrStatusGoodSmall } from 'react-icons/fa';
 
 export const FriendListItem = ({avatar, name, isOnline, id}) => {
 return (
     <li class="item">
+      {/* <GrStatusGoodSmall size={16}/> */}
   <span class="status">{isOnline}</span>
   <img class="avatar" src={avatar} alt="User avatar" width="48" />
   <p class="name">{name}</p>

@@ -7,7 +7,7 @@ export const Statistics = ({ title, stats }) => {
     return (
 <section class="statistics">
   <h2 class="title">Upload stats</h2>
-
+  {/* <{title ? Title : TitleisHidden}>{title} <{title ? Title : TitleisHidden}/> */}
   <ul class="stat-list">
     <li class="item">
     {stats.map((stats) => (

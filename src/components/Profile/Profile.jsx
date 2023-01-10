@@ -1,5 +1,5 @@
 import {App} from '../App'
-import PropTypes from 'prop-types';
+import PropTypes from './Profile.module.css'
 
 export const Profile = ({username, usertag, location, avatar, stats})=> {
   return (
@@ -11,7 +11,7 @@ export const Profile = ({username, usertag, location, avatar, stats})=> {
       class="avatar"
     />
     <p class="name">{username}</p>
-    <p class="tag">{usertag}</p>
+    <p class="tag">@{usertag}</p>
     <p class="location">{location}</p>
   </div>
 
