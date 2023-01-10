@@ -14,6 +14,6 @@ return (
 FriendListItem.propTypes ={
     avatar: PropTypes.string,
     name: PropTypes.string,
-    isOnline: PropTypes.string,
+    isOnline: PropTypes.bool,
     id: PropTypes.number,
   }

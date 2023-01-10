@@ -5,7 +5,8 @@ import css from './TransactionHistory.module.css'
 
 export const TransactionHistory =({items}) => {
 return (
-    <table class="transaction-history">
+  <div className={css.wrapper}>
+    <table className={css.transaction_history}>
   <thead>
     <tr>
       <th>Type</th>
@@ -24,6 +25,7 @@ return (
         ))}
   </tbody>
   </table>
+  </div>
 )
 }
  
@@ -33,9 +35,52 @@ TransactionHistory.propTypes ={
     items: PropTypes.arrayOf(
       PropTypes.exact({
         type: PropTypes.string.isRequired,
-        amount: PropTypes.number.isRequired,
+        amount: PropTypes.string.isRequired,
         currency: PropTypes.string.isRequired,
         id: PropTypes.number.isRequired,
       }),
     ),
   }
+
+
+
+
+
+  // export const TransactionHistory = ({ items }) => {
+  //   return (
+  //     <div className={css.wrapper}>
+  //       <table className={css.transaction_history}>
+  //         <thead>
+  //           <tr>
+  //             <th>Type</th>
+  //             <th>Amount</th>
+  //             <th>Currency</th>
+  //           </tr>
+  //         </thead>
+  //         <tbody>
+  //           {items.map(event => {
+  //             return (
+  //               <tr key={event.id}>
+  //                 <td>{event.type}</td>
+  //                 <td>{event.amount}</td>
+  //                 <td>{event.currency}</td>
+  //               </tr>
+  //             );
+  //           })}
+  //         </tbody>
+  //       </table>
+  //     </div>
+  //   );
+  // };
+  
+  // TransactionHistory.propTypes = {
+  //   transactions: PropTypes.arrayOf(
+  //     PropTypes.shape({
+  //       id: PropTypes.number.isRequired,
+  //       type: PropTypes.string.isRequired,
+  //       amount: PropTypes.string.isRequired,
+  //       currency: PropTypes.string.isRequired,
+  //     })
+  //   ),
+  // };
+  
