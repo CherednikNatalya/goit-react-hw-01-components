@@ -1,4 +1,4 @@
-import {App} from '../App'
+// import {App} from '../App'
 import PropTypes from 'prop-types';
 import css from './Profile.module.css'
 
